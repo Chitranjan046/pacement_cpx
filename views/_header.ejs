@@ -1,0 +1,30 @@
+<header>
+	<% if (locals.user) { %>
+	<nav class="navbar"
+		style="
+				display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100px;
+                box-shadow: 0 8px 6px -6px black;
+                padding: 0px 30px;
+                background-color: rgb(224, 167, 23);
+    
+    
+				:hover {
+                background-color: black;
+                }
+				
+			">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">Placement Cell</a>
+			<a class="navbar-brand" href="/">Welcome Cpx <%=locals.user.name%></a>
+			<form class="d-flex px-4">
+				<a class="navbar-brand p-2" href="/company/home">List of Company</a>
+				<a class="navbar-brand p-2" href="/users/download-csv">Student  Report</a>
+				<a class="navbar-brand p-2" href="/users/signout" style="background-color: black; border-radius: 6px">Sign out</a>
+			</form>
+		</div>
+	</nav>
+	<% } %>
+</header>
